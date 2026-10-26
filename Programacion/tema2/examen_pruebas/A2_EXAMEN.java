@@ -36,7 +36,7 @@ public class A2_EXAMEN {
 					sumatorioMultiplos += i;
 				}
 			}
-			System.out.print("\nLa suma de los múltiplos " + menor + " y " + mayor + " es " + sumatorioMultiplos);
+			System.out.print("\nLa suma de los múltiplos entre " + menor + " y " + mayor + " es " + sumatorioMultiplos);
 		}
 	
 	}
