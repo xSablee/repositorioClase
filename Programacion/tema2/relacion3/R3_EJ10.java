@@ -17,46 +17,41 @@ package relacion3;
 import java.util.Scanner;
 
 public class R3_EJ10 {
-	private static Scanner teclado = new Scanner (System.in);
+	private static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		//Versión 1
+		// Versión 1
 		/*
-		int baseTrianguloImpar, contador;
+		 * int baseTrianguloImpar, contador; do {
+		 * System.out.println("Introduzca base del trángulo (impar)");
+		 * baseTrianguloImpar = Integer.parseInt(teclado.nextLine()); } while
+		 * (baseTrianguloImpar%2 == 0 || baseTrianguloImpar<=0 );
+		 * 
+		 * for (int i = 0; i < baseTrianguloImpar; i += 2) { System.out.print("*");
+		 * contador = 0; while (contador<i) { System.out.print("*"); contador++; }
+		 * System.out.println(); }
+		 */
+
+		// Versión 2
+		int baseTrianguloImpar, contadorTabulaciones, contador;
+
 		do {
 			System.out.println("Introduzca base del trángulo (impar)");
 			baseTrianguloImpar = Integer.parseInt(teclado.nextLine());
-		} while (baseTrianguloImpar%2 == 0 || baseTrianguloImpar<=0 );
-		
-		for (int i = 0; i < baseTrianguloImpar; i += 2) {
-			System.out.print("*");
-			contador = 0;
-			while (contador<i) {
-				System.out.print("*");
-				contador++;
-			}
-			System.out.println();
-		}*/
-		
-		//Versión 2
-		int baseTrianguloImpar, contador, contadorTabulaciones;
-		
-		do {
-			System.out.println("Introduzca base del trángulo (impar)");
-			baseTrianguloImpar = Integer.parseInt(teclado.nextLine());
-		} while (baseTrianguloImpar%2 == 0 || baseTrianguloImpar<=0 );
-		for (int i = 0; baseTrianguloImpar < 0; i+=2) {
-			contadorTabulaciones = i;
-			while (contadorTabulaciones<baseTrianguloImpar) {
-				System.out.print("\t");
+		} while (baseTrianguloImpar % 2 == 0 || baseTrianguloImpar <= 0);
+		for (int i = 0; i < baseTrianguloImpar; i+=2) {
+			contadorTabulaciones = i/2;
+			while (contadorTabulaciones < baseTrianguloImpar/2) {
+				System.out.print(" ");
 				contadorTabulaciones++;
 			}
-			
-		}
-		
-
-			System.out.println();
+				System.out.print("*");
+				contador = 0;
+				while (contador < i) {
+					System.out.print("*");
+					contador++;
+				}
+				System.out.println();
+			}
 		}
 	}
-
-}
