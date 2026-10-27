@@ -30,8 +30,16 @@ public class R3_EJ8 {
 		caracter = teclado.nextLine();
 		
 		for (int i = 0; i < alto; i++) {
-			System.out.println(caracter.repeat(ancho));
+			System.out.print(caracter);
+			for (int j = 0; j < ancho ; j++) {
+				System.out.print(caracter);
+			}
+			System.out.println(" ");
 		}
+	
+		/*for (int i = 0; i < alto; i++) {
+			System.out.println(caracter.repeat(ancho));
+		}*/
 
 	}
 
