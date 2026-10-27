@@ -13,7 +13,7 @@ package relacion3;
 
 import java.util.Scanner;
 
-public class R3_4 {
+public class R3_EJ4 {
 	private static final int NUMERO_MAXIMO_DE_INTENTOS = 5;
 	private static Scanner teclado = new Scanner(System.in);
 

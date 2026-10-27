@@ -6,7 +6,7 @@ package relacion3;
 
 import java.util.Scanner;
 
-public class R3_2 {
+public class R3_EJ2 {
 	private static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {

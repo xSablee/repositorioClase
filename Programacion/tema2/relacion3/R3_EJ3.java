@@ -8,7 +8,7 @@ package relacion3;
 
 import java.util.Scanner;
 
-public class R3_3 {
+public class R3_EJ3 {
 	private static final int DIVISOR = 10;
 	private static Scanner teclado = new Scanner(System.in);
 

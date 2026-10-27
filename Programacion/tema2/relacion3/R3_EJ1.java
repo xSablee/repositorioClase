@@ -6,7 +6,7 @@ package relacion3;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class R3_1 {
+public class R3_EJ1 {
 	private static final int TOTAL_NUMEROS_A_PEDIR = 3;
 	private static Scanner teclado = new Scanner(System.in);
 

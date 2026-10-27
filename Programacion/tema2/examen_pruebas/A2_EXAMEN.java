@@ -24,13 +24,12 @@ public class A2_EXAMEN {
 			menor = numero2;
 			mayor = numero1;
 		}
-		
+
 		if ((mayor - menor) < menor) {
 			System.out.println("No hay múltiplos de " + menor + " entre " + mayor + " y " + menor);
 		} else {
-			System.out.print(
-					"Los números entre " + menor + " y " + mayor + " que son múltiplos de " + menor + " son: ");
-			for (int i = menor; i <= (mayor - menor); i++) {
+			System.out.print("Los números entre " + menor + " y " + mayor + " que son múltiplos de " + menor + " son: ");
+			for (int i = menor * 2; i < mayor; i++) {
 				if (i % menor == 0) {
 					System.out.print(i + " , ");
 					sumatorioMultiplos += i;
@@ -38,6 +37,6 @@ public class A2_EXAMEN {
 			}
 			System.out.print("\nLa suma de los múltiplos entre " + menor + " y " + mayor + " es " + sumatorioMultiplos);
 		}
-	
+
 	}
 }
