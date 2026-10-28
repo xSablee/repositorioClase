@@ -16,7 +16,7 @@ public class R3_EJ10_con_mismo_bucle {
 		 caracter = teclado.nextLine();
 		 
 		 for (int i = 0; i < (baseTrianguloImpar/2+1); i++) {
-			for (int j = (baseTrianguloImpar/2+1); j > i ; j--) {
+			for (int j = (baseTrianguloImpar/2); j > i ; j--) {
 				System.out.print(" ");
 			}
 			for (int j = 0; j < (2*i+1); j++) {
