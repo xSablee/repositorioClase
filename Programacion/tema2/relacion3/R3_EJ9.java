@@ -22,7 +22,7 @@ public class R3_EJ9 {
 				System.out.println("\t  " + contadorTablas + "*" + contadorMultiplicaciones + "=" + (contadorTablas * contadorMultiplicaciones));
 			}
 			if (contadorTablas < MULTIPLICADOR_MAXIMO) {
-				System.out.println(" ");
+				System.out.println();
 			} 
 			
 		}

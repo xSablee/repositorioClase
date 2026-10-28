@@ -13,7 +13,7 @@ package relacion3;
 import java.util.Scanner;
 
 public class R3_EJ8 {
-	private static Scanner teclado = new Scanner (System.in);
+	private static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		int ancho, alto;
@@ -21,25 +21,26 @@ public class R3_EJ8 {
 		do {
 			System.out.println("Introduce ancho del rectángulo");
 			ancho = Integer.parseInt(teclado.nextLine());
-		} while (ancho<=0);
+		} while (ancho <= 0);
 		do {
 			System.out.println("Introduce alto del rectángulo");
 			alto = Integer.parseInt(teclado.nextLine());
-		} while (alto<=0);
+		} while (alto <= 0);
 		System.out.println("Introduce el carácter con el que quieres pintar el rectángulo");
 		caracter = teclado.nextLine();
-		
+
 		for (int i = 0; i < alto; i++) {
-			System.out.print(caracter);
-			for (int j = 0; j < ancho ; j++) {
+			for (int j = 0; j < ancho; j++) {
 				System.out.print(caracter);
 			}
 			System.out.println(" ");
 		}
-	
-		/*for (int i = 0; i < alto; i++) {
-			System.out.println(caracter.repeat(ancho));
-		}*/
+
+		/*
+		 * for (int i = 0; i < alto; i++) { 
+		 * System.out.println(caracter.repeat(ancho));
+		 * }
+		 */
 
 	}
 

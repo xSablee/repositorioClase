@@ -39,19 +39,19 @@ public class R3_EJ10 {
 			System.out.println("Introduzca base del trángulo (impar)");
 			baseTrianguloImpar = Integer.parseInt(teclado.nextLine());
 		} while (baseTrianguloImpar % 2 == 0 || baseTrianguloImpar <= 0);
-		for (int i = 0; i < baseTrianguloImpar; i+=2) {
-			contadorTabulaciones = i/2;
-			while (contadorTabulaciones < baseTrianguloImpar/2) {
+		for (int i = 0; i < baseTrianguloImpar; i += 2) {
+			contadorTabulaciones = i / 2;
+			while (contadorTabulaciones < baseTrianguloImpar / 2) {
 				System.out.print(" ");
 				contadorTabulaciones++;
 			}
+			System.out.print("*");
+			contador = 0;
+			while (contador < i) {
 				System.out.print("*");
-				contador = 0;
-				while (contador < i) {
-					System.out.print("*");
-					contador++;
-				}
-				System.out.println();
+				contador++;
 			}
+			System.out.println();
 		}
 	}
+}
