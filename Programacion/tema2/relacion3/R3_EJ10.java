@@ -22,9 +22,13 @@ public class R3_EJ10 {
 	public static void main(String[] args) {
 		// Versión 1
 		/*
-		 * int baseTrianguloImpar, contador; do {
+		 * int baseTrianguloImpar, contador; 
+		 * String caracter;
+		 * do {
 		 * System.out.println("Introduzca base del trángulo (impar)");
 		 * baseTrianguloImpar = Integer.parseInt(teclado.nextLine()); } while
+		 * System.out.println("Introduzca caracter");
+		 * caracter = teclado.nextLine();
 		 * (baseTrianguloImpar%2 == 0 || baseTrianguloImpar<=0 );
 		 * 
 		 * for (int i = 0; i < baseTrianguloImpar; i += 2) { System.out.print("*");
@@ -34,21 +38,24 @@ public class R3_EJ10 {
 
 		// Versión 2
 		int baseTrianguloImpar, contadorTabulaciones, contador;
+		String caracter;
 
 		do {
 			System.out.println("Introduzca base del trángulo (impar)");
 			baseTrianguloImpar = Integer.parseInt(teclado.nextLine());
 		} while (baseTrianguloImpar % 2 == 0 || baseTrianguloImpar <= 0);
+		 System.out.println("Introduzca caracter");
+		 caracter = teclado.nextLine();
 		for (int i = 0; i < baseTrianguloImpar; i += 2) {
 			contadorTabulaciones = i / 2;
 			while (contadorTabulaciones < baseTrianguloImpar / 2) {
 				System.out.print(" ");
 				contadorTabulaciones++;
 			}
-			System.out.print("*");
+			System.out.print(caracter);
 			contador = 0;
 			while (contador < i) {
-				System.out.print("*");
+				System.out.print(caracter);
 				contador++;
 			}
 			System.out.println();
