@@ -1,3 +1,17 @@
+//10. Realizar un programa que solicite la base de un triángulo (debe ser un número impar) así como un
+//carácter. El programa pintará por pantalla un triángulo con esa base de esta forma.
+//◦ Introduce la base (impar) : 7
+//▪ *
+//▪ ***
+//▪ *****
+//▪ *******
+//◦ Realiza una segunda versión del programa para que el triángulo tenga esta forma.
+//◦ Introduce la base (impar) : 7
+//▪ *
+//▪ ***
+//▪ *****
+//▪ ****** 
+
 package relacion3;
 
 import java.util.Scanner;
