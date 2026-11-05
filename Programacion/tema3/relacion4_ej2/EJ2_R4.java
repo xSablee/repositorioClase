@@ -9,7 +9,7 @@
 //2! = 2 
 //3! = 6 
 //4! = 24
-package relacion4_ej3;
+package relacion4_ej2;
 
 import java.util.Scanner;
 

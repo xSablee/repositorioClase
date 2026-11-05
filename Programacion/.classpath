@@ -7,6 +7,5 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="tema2"/>
-	<classpathentry kind="src" path="tema3"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

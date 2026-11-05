@@ -12,14 +12,22 @@ public class R3_EJ2 {
 	public static void main(String[] args) {
 		int base;
 		int exponente;
-		int baseAcumulada;
+		int resultado;
 		do {
 			System.out.println("Introduzca número base");
 			base = Integer.parseInt(teclado.nextLine());
 			System.out.println("Introduzca número exponente");
 			exponente = Integer.parseInt(teclado.nextLine());
-			baseAcumulada = base;
 		} while (base < 0 && exponente < 0);
+		resultado = calculoPotencias(base, exponente);
+		System.out.println("El " + base + " elevado a " + exponente + " es igual a " + resultado);
+	}
+
+	public static int calculoPotencias(int base, int exponente) {
+		int baseAcumulada;
+		baseAcumulada = base;
+
+		;
 		if (exponente > 0) {
 			for (int i = 1; i < exponente; i++) {
 				baseAcumulada *= base;
@@ -27,7 +35,7 @@ public class R3_EJ2 {
 		} else {
 			baseAcumulada = base - (base - 1);
 		}
-		System.out.println("El " + base + " elevado a " + exponente + " es igual a " + baseAcumulada);
+		return baseAcumulada;
 	}
 
 }
