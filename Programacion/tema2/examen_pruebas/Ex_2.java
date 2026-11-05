@@ -56,7 +56,7 @@ public class Ex_2 {
 		}
 	}
 
-	private int obtenerNumeroRandom() {
+	private static int obtenerNumeroRandom() {
 		return numeroRandom.nextInt(101);
 	}
 }
