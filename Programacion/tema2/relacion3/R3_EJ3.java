@@ -13,19 +13,18 @@ public class R3_EJ3 {
 	private static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		long numero, numeroDividido = 0;
-		int cifras = 1;
+		long numero, resultadoCifras;
 		System.out.println("Introduzca número");
 		numero = Integer.parseInt(teclado.nextLine());
-		numeroDividido = numero;
-		if (numero < 10) {
-			System.out.println("El " + numero + " tiene un total de " + cifras + " cifras");
-		} else {
-			do {
-				numeroDividido /= DIVISOR;
-				cifras += 1;
-			} while (numeroDividido > 10);
-			System.out.println("El " + numero + " tiene un total de " + cifras + " cifras");
-		}
+		resultadoCifras = numeroCifras(numero);
+		System.out.println("El " + numero + " tiene un total de " + resultadoCifras + " cifras");
 	}
+	public static int numeroCifras (long numero) {
+		int numeroCifras = 1;	
+		while (numero>10) {
+			numero /= DIVISOR;
+			numeroCifras += 1;
+		}
+			return numeroCifras;
+	} 
 }

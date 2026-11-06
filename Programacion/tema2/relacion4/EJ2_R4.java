@@ -9,19 +9,22 @@
 //2! = 2 
 //3! = 6 
 //4! = 24
-package relacion4_ej2;
+package relacion4;
 
 import java.util.Scanner;
 
-public class EJ3_R4 {
+public class EJ2_R4 {
 	private static Scanner teclado = new Scanner (System.in);
 	public static void main(String[] args) {
 		int numeroIntroducido, factorial;
 		
 			System.out.println("Introduzca número positivo");
 			numeroIntroducido = Integer.parseInt(teclado.nextLine());
-			factorial = factoriales(numeroIntroducido);
-			System.out.println("El factorial de " + numeroIntroducido + " con los límites establecidos es: " + factorial);
+			for (int i = 0; i <= numeroIntroducido; i++) {
+				factoriales(i);
+				factorial = factoriales(i);
+				System.out.println("El factorial de " + i + " es igual a " + factorial);
+			}
 		
 	}
 	public static int factoriales (int numeroIntroducido) {

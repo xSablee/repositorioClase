@@ -8,7 +8,7 @@
 //El método solicitará un número comprendido entre esos dos valores y lo devolverá. Si no está en el rango lo
 //volverá a solicitar . Si el límite inferior es mayor al limite superior, los intercambia. 
 //Probarlo desde el main.
-package relacion4_ej1;
+package relacion4;
 
 import java.util.Scanner;
 
@@ -21,6 +21,7 @@ public class EJ1_R4 {
 		limite1 =  Integer.parseInt(teclado.nextLine());
 		System.out.println("Número límite 2:");
 		limite2 =  Integer.parseInt(teclado.nextLine());
+		System.out.println("Introduzca número comprendido entre " + limite1 + " y " + limite2 + ".");
 		resultado = solicitarNumeroEnRango(limite1,limite2);
 		System.out.println("El número " + resultado + " se encuentra entre los límites asignados");
 	}
@@ -35,7 +36,6 @@ public class EJ1_R4 {
 			limiteSuperior = auxiliar;
 		}
 		do {
-			System.out.println("Introduzca número comprendido entre " + limiteInferior + " y " + limiteSuperior + ".");
 			numeroIntroducido = Integer.parseInt(teclado.nextLine());
 		} while (!(numeroIntroducido>limiteInferior & numeroIntroducido<limiteSuperior));
 
