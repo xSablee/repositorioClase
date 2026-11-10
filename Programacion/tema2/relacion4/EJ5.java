@@ -78,7 +78,6 @@ public class EJ5 {
 		} else {
 			System.out.println("La nueva hora es " + hora + ":" + minutos + ":" + segundos + ".");
 		}
-		
 	}
-
 }
+
