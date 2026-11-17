@@ -14,15 +14,15 @@ public class ej1 {
 
 	public static void main(String[] args) {
 		int numerosAleatorios[] = new int[10];
-		generadorNumeroAleatorios(numerosAleatorios);
-		mostrarArray(numerosAleatorios);
-		mostrarSuperioresALimite(numerosAleatorios);
-	}
-
-	private static void mostrarSuperioresALimite(int[] numerosAleatorios) {
 		int limite;
 		System.out.println("Introduzca el límite:");
 		limite = Integer.parseInt(teclado.nextLine());
+		generadorNumeroAleatorios(numerosAleatorios);
+		mostrarArray(numerosAleatorios);
+		mostrarSuperioresALimite(numerosAleatorios, limite);
+	}
+
+	private static void mostrarSuperioresALimite(int[] numerosAleatorios, int limite) {
 		System.out.print("Los números superiores a la media son:");
 		for (int i = 0; i < numerosAleatorios.length; i++) {
 			if (numerosAleatorios[i] > limite) {
