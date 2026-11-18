@@ -15,64 +15,76 @@ import java.util.Arrays;
 
 public class EJ5 {
 
+	private static final int DURACION_LIMITE_VIDEO_LARGO = 20;
+	private static final int MAXIMO_NUM_VIDEOS = 8;
+
 	public static void main(String[] args) {
-		int[] duracionVideos = new int[8];
+		int[] duracionVideos = new int[MAXIMO_NUM_VIDEOS];
 		int numVideosLargos, posicionVideoMasLargo, posicionVideoQueSalto;
 		int minutos = 0, segundos = 0;
+		int[] minutosSegundos;
+
 		segundosAleatoriosTikTok(duracionVideos);
 		numVideosLargos = videosLargosVistos(duracionVideos);
-		minutosSegundosVisualizacion(duracionVideos, minutos, segundos);
+		minutosSegundos = minutosSegundosVisualizacion(duracionVideos);
+		System.out.println(Arrays.toString(minutosSegundos));
 		posicionVideoMasLargo = videoMasLargo(duracionVideos);
 		posicionVideoQueSalto = videoSaltadoAntes(duracionVideos);
-		salidasDeVariables(duracionVideos, posicionVideoMasLargo, posicionVideoQueSalto, minutos, segundos, numVideosLargos);
+		salidasDeVariables(duracionVideos, posicionVideoMasLargo, posicionVideoQueSalto, minutosSegundos,
+				numVideosLargos);
 	}
 
 	private static void salidasDeVariables(int[] duracionVideos, int posicionVideoMasLargo, int posicionVideoQueSalto,
-			int minutos, int segundos, int numVideosLargos) {
+			int[] minutosSegundos, int numVideosLargos) {
 		System.out.println("Ha visto un total de " + numVideosLargos + " de videos de más de 45 segundos de duración");
-		System.out.println("Ha consumido un total de " + minutos + " minutos " + segundos + " segundos en visualización");
+		System.out.println("Ha consumido un total de " + minutosSegundos[0] + " minutos y " + minutosSegundos[1]
+				+ " segundos en visualización");
 		System.out.println("El vídeo más largo que ha visto es el número " + (posicionVideoMasLargo + 1) + ".");
-		if
-		System.out.println("El primer video que saltó en menos de diez segundos fue el número" + (posicionVideoQueSalto + 1) + ".");
-		
+		System.out.println("El primer video que saltó en menos de diez segundos fue el número "
+				+ (posicionVideoQueSalto + 1) + ".");
+
 	}
 
 	private static int videoSaltadoAntes(int[] duracionVideos) {
-		int posicionVideoQueSalto = -1, i=0;
-		do {
-			if (duracionVideos[i]<10) {
+		int posicionVideoQueSalto = -1, i = 0;
+		while (posicionVideoQueSalto == -1 && i < duracionVideos.length) {
+			if (duracionVideos[i] < 10) {
 				posicionVideoQueSalto = i;
 			}
 			i++;
-		} while (posicionVideoQueSalto != -1 || i==8);
+		}
 		return posicionVideoQueSalto;
 	}
 
 	private static int videoMasLargo(int[] duracionVideos) {
-		int posicionVideoMasLargo = -1;
-		for (int i = 0; i < duracionVideos.length-1; i++) {
-			if (duracionVideos[i+1] > duracionVideos[i]) {
+		int posicionVideoMasLargo = 0, minutosVideosMasLargo = duracionVideos[0];
+		for (int i = 1; i < duracionVideos.length; i++) {
+			if (duracionVideos[i] > minutosVideosMasLargo) {
 				posicionVideoMasLargo = i;
+				minutosVideosMasLargo = duracionVideos[i];
 			}
 		}
 		return posicionVideoMasLargo;
 	}
 
-	private static void minutosSegundosVisualizacion(int[] duracionVideos, int minutos, int segundos) {
+	private static int[] minutosSegundosVisualizacion(int[] duracionVideos) {
+		int minutos = 0, segundos = 0;
+		int[] minutosSegundos = new int[2];
 		for (int i = 0; i < duracionVideos.length; i++) {
-			minutos += duracionVideos[i];
+			segundos += duracionVideos[i];
 		}
-		if (minutos > 60) {
-			segundos = minutos % 60;
-			minutos /= 60;
-		}
+		minutos = segundos / 60;
+		segundos = segundos % 60;
+		minutosSegundos[0] = minutos;
+		minutosSegundos[1] = segundos;
+		return minutosSegundos;
 	}
 
 	private static int videosLargosVistos(int[] duracionVideos) {
 		int numVideosLargos = 0;
 		for (int i = 0; i < duracionVideos.length; i++) {
-			if (duracionVideos[i] > 45) {
-				numVideosLargos += 1;
+			if (duracionVideos[i] > DURACION_LIMITE_VIDEO_LARGO) {
+				numVideosLargos++;
 			}
 		}
 		return numVideosLargos;
