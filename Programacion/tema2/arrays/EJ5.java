@@ -15,13 +15,12 @@ import java.util.Arrays;
 
 public class EJ5 {
 
-	private static final int DURACION_LIMITE_VIDEO_LARGO = 20;
+	private static final int DURACION_LIMITE_VIDEO_LARGO = 45;
 	private static final int MAXIMO_NUM_VIDEOS = 8;
 
 	public static void main(String[] args) {
 		int[] duracionVideos = new int[MAXIMO_NUM_VIDEOS];
 		int numVideosLargos, posicionVideoMasLargo, posicionVideoQueSalto;
-		int minutos = 0, segundos = 0;
 		int[] minutosSegundos;
 
 		segundosAleatoriosTikTok(duracionVideos);
@@ -36,7 +35,8 @@ public class EJ5 {
 
 	private static void salidasDeVariables(int[] duracionVideos, int posicionVideoMasLargo, int posicionVideoQueSalto,
 			int[] minutosSegundos, int numVideosLargos) {
-		System.out.println("Ha visto un total de " + numVideosLargos + " de videos de más de 45 segundos de duración");
+		System.out.println(
+				"Ha visto un total de " + numVideosLargos + " de videos de más de " + DURACION_LIMITE_VIDEO_LARGO + " segundos de duración");
 		System.out.println("Ha consumido un total de " + minutosSegundos[0] + " minutos y " + minutosSegundos[1]
 				+ " segundos en visualización");
 		System.out.println("El vídeo más largo que ha visto es el número " + (posicionVideoMasLargo + 1) + ".");
