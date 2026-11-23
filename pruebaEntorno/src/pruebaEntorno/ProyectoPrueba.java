@@ -6,6 +6,7 @@ public class ProyectoPrueba {
 		System.out.println("Hola mundo");
 		System.out.println("Adiós");
 		metodoPrueba();
+		System.out.println("Hola, otra vez");
 	}
 
 	private static void metodoPrueba() {
