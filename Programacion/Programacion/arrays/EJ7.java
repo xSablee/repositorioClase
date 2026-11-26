@@ -15,14 +15,15 @@ public class EJ7 {
 
 	public static void main(String[] args) {
 		int[] mediaTemperaturaPorMes;
+		String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
 
-		mediaTemperaturaPorMes = solicitarTemperatura();
-		diagramaDeTemperaturas(mediaTemperaturaPorMes);
+		mediaTemperaturaPorMes = solicitarTemperatura(meses);
+		diagramaDeTemperaturas(mediaTemperaturaPorMes, meses);
 	}
 
-	private static void diagramaDeTemperaturas(int[] mediaTemperaturaPorMes) {
+	private static void diagramaDeTemperaturas(int[] mediaTemperaturaPorMes, String[] meses) {
 		for (int i = 0; i < mediaTemperaturaPorMes.length; i++) {
-			System.out.print("Mes " + (i+1) + " de " + MAXIMO_MESES + ":");
+			System.out.printf("%-15s" , meses[i] + ":");
 			for (int j = 0; j < mediaTemperaturaPorMes[i]; j++) {
 				System.out.print("*");
 			}
@@ -30,12 +31,11 @@ public class EJ7 {
 		}
 	}
 
-	private static int[] solicitarTemperatura() {
+	private static int[] solicitarTemperatura(String[] meses) {
 		int[] mediaTemperaturaPorMes = new int[MAXIMO_MESES];
 		for (int i = 0; i < mediaTemperaturaPorMes.length; i++) {
 			do {
-				System.out.println("Inserte temperatura media del mes " + (i + 1) + "/" + MAXIMO_MESES
-						+ " del año 2015 (valores entre " + MINIMO_TEMPERATURA + " y " + MAXIMO_TEMPERATURA + ").");
+				System.out.println("Inserte temperatura media del mes " + meses[i] + " del año 2015 (valores entre " + MINIMO_TEMPERATURA + " y " + MAXIMO_TEMPERATURA + ").");
 				mediaTemperaturaPorMes[i] = Integer.parseInt(teclado.nextLine());
 			} while (mediaTemperaturaPorMes[i] > MAXIMO_TEMPERATURA || mediaTemperaturaPorMes[i] < MINIMO_TEMPERATURA);
 		}
