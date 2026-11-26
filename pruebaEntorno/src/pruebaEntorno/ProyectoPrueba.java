@@ -10,7 +10,7 @@ public class ProyectoPrueba {
 	}
 
 	private static void metodoPrueba() {
-		// TODO Auto-generated method stub
+		System.out.println("Hola, desde un método diferente en github");
 		
 	}
 
