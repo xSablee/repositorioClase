@@ -10,7 +10,7 @@ package relacion6String;
 import java.util.Scanner;
 
 public class EJ4 {
-	private static final int MAXIMO_LONGITUD_CONTRASEÑA = 7;
+	private static final int MINIMO_LONGITUD_CONTRASEÑA = 7;
 	private static final int MAXIMO_LONGITUD_NOMBRE = 30;
 	private static Scanner teclado = new Scanner(System.in);
 
@@ -35,7 +35,7 @@ public class EJ4 {
 	private static boolean saberSiContraseñaEnParametros(String contraseña) {
 		boolean siEstaEnParametro = false, tieneDigito = false, tieneLetra = false, tieneSpace = false, tieneCaracterNoAlfanumerico = false;
 		int i = 0;
-		if (contraseña.length()<MAXIMO_LONGITUD_CONTRASEÑA) {
+		if (contraseña.length()>MINIMO_LONGITUD_CONTRASEÑA) {
 			do {
 				tieneDigito = Character.isDigit(contraseña.charAt(i));
 				i++;
