@@ -10,7 +10,9 @@ public class ProyectoPrueba {
 	}
 
 	private static void metodoPrueba() {
-		System.out.println("Hola, desde el escritorio y eclipse:");
+
+		System.out.println("Hola, desde el escritorio , eclipse y la web");
+
 		
 	}
 
